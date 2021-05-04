@@ -29,6 +29,9 @@
         <!-- DataTables Responsive CSS -->
         <link href="<?=base_url()?>template/back-end/css/dataTables/dataTables.responsive.css" rel="stylesheet">
 
+        <!-- Favicon -->
+        <link rel="icon" href="<?=base_url()?>assets/images/favicon32.png" type="image/gif">
+
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>

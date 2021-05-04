@@ -13,7 +13,7 @@ class Pengumuman extends CI_Controller{
 	public function index()
 	{
 		$data = array(
-			'title'			=>'SMAN 1 Ungaran',
+			'title'			=>'SMA Baskoro Raya',
 			'title2'		=>'Pengumuman',
 			'pengumuman'	=>$this->m_pengumuman->lists(),
 			'isi'			=>'admin/pengumuman/v_list'
@@ -29,7 +29,7 @@ class Pengumuman extends CI_Controller{
 				
 		if ($this->form_validation->run() == FALSE){
 			$data = array(
-			'title'			=>'SMAN 1 Ungaran',
+			'title'			=>'SMA Baskoro Raya',
 			'title2'		=>'Tambah Pengumuman',
 			'isi'			=>'admin/pengumuman/v_add'
 			);

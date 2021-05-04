@@ -13,7 +13,7 @@ class Siswa extends CI_Controller{
 	public function index()
 	{
 		$data = array(
-			'title'		=>'SMAN 1 Ungaran',
+			'title'		=>'SMA Baskoro Raya',
 			'title2'	=>'Data Siswa',
 			'siswa'		=>$this->m_siswa->lists(),
 			'isi'		=>'admin/siswa/v_list'
@@ -38,7 +38,7 @@ class Siswa extends CI_Controller{
 			if (!$this->upload->do_upload('foto_siswa'))
             {                
 				$data = array(
-				'title'=>'SMAN 1 Ungaran',
+				'title'=>'SMA Baskoro Raya',
 				'title2'=>'Tambah Data Siswa',
 				'error'=>$this->upload->display_errors(), 
 				'isi'=>'admin/siswa/v_add'
@@ -67,7 +67,7 @@ class Siswa extends CI_Controller{
 		}
 		
 		$data = array(
-				'title'=>'SMAN 1 Ungaran',
+				'title'=>'SMA Baskoro Raya',
 				'title2'=>'Tambah Data Siswa',
 				'isi'=>'admin/siswa/v_add'
 				);		
@@ -91,7 +91,7 @@ class Siswa extends CI_Controller{
 			if (!$this->upload->do_upload('foto_siswa'))
             {                
 				$data = array(
-				'title'=>'SMAN 1 Ungaran',
+				'title'=>'SMA Baskoro Raya',
 				'title2'=>'Edit Data Siswa',
 				'error'=>$this->upload->display_errors(),
 				'siswa'=>$this->m_siswa->detail($id_siswa),
@@ -144,7 +144,7 @@ class Siswa extends CI_Controller{
 		}
 		
 		$data = array(
-				'title'=>'SMAN 1 Ungaran',
+				'title'=>'SMA Baskoro Raya',
 				'title2'=>'Edit Data Siswa',
 				'siswa'=>$this->m_siswa->detail($id_siswa),
 				'isi'=>'admin/siswa/v_edit'

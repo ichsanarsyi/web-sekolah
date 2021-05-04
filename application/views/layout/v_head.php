@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>SMAN 1 Ungaran</title>
+<title>SMA Baskoro Raya</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Unicat project">
@@ -13,4 +13,6 @@
 <link rel="stylesheet" type="text/css" href="<?=base_url()?>template/front-end/plugins/OwlCarousel2-2.2.1/animate.css">
 <link rel="stylesheet" type="text/css" href="<?=base_url()?>template/front-end/styles/main_styles.css">
 <link rel="stylesheet" type="text/css" href="<?=base_url()?>template/front-end/styles/responsive.css">
+<!-- Favicon -->
+<link rel="icon" href="<?=base_url()?>assets/images/favicon32.png" type="image/gif">
 </head>

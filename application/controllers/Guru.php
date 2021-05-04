@@ -14,7 +14,7 @@ class Guru extends CI_Controller{
 	public function index()
 	{
 		$data = array(
-			'title'=>'SMAN 1 Ungaran',
+			'title'=>'SMA Baskoro Raya',
 			'title2'=>'Data Guru',
 			'guru'=>$this->m_guru->lists(),
 			'isi'=>'admin/guru/v_list'
@@ -71,7 +71,7 @@ class Guru extends CI_Controller{
 		}
 		
 		$data = array(
-				'title'=>'SMAN 1 Ungaran',
+				'title'=>'SMA Baskoro Raya',
 				'title2'=>'Tambah Data Guru',
 				'mapel'=>$this->m_mapel->lists(), 
 				'isi'=>'admin/guru/v_add'
@@ -98,7 +98,7 @@ class Guru extends CI_Controller{
 			if (!$this->upload->do_upload('foto_guru'))
             {                
 				$data = array(
-				'title'=>'SMAN 1 Ungaran',
+				'title'=>'SMA Baskoro Raya',
 				'title2'=>'Edit Data Guru',
 				'error'=>$this->upload->display_errors(),
 				'guru'=>$this->m_guru->detail($id_guru),
@@ -154,7 +154,7 @@ class Guru extends CI_Controller{
 		}
 		
 		$data = array(
-				'title'=>'SMAN 1 Ungaran',
+				'title'=>'SMA Baskoro Raya',
 				'title2'=>'Edit Data Guru',
 				'mapel'=>$this->m_mapel->lists(), 
 				'guru'=>$this->m_guru->detail($id_guru),

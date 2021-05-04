@@ -13,7 +13,7 @@ class Berita extends CI_Controller{
 	public function index()
 	{
 		$data = array(
-			'title'=>'SMAN 1 Ungaran',
+			'title'=>'SMA Baskoro Raya',
 			'title2'=>'Data Berita',
 			'berita'=>$this->m_berita->lists(),
 			'isi'=>'admin/berita/v_list'
@@ -35,7 +35,7 @@ class Berita extends CI_Controller{
 			if (!$this->upload->do_upload('gambar_berita'))
             {                
 				$data = array(
-				'title'=>'SMAN 1 Ungaran',
+				'title'=>'SMA Baskoro Raya',
 				'title2'=>'Tambah Berita',
 				'error'=>$this->upload->display_errors(),
 				'isi'=>'admin/berita/v_add'
@@ -64,7 +64,7 @@ class Berita extends CI_Controller{
 		}
 		
 		$data = array(
-			'title'=>'SMAN 1 Ungaran',
+			'title'=>'SMA Baskoro Raya',
 			'title2'=>'Tambah Berita',
 			'isi'=>'admin/berita/v_add'
 		);
@@ -85,7 +85,7 @@ class Berita extends CI_Controller{
 			if (!$this->upload->do_upload('gambar_berita'))
             {                
 				$data = array(
-				'title'=>'SMAN 1 Ungaran',
+				'title'=>'SMA Baskoro Raya',
 				'title2'=>'Edit Berita',
 				'error'=>$this->upload->display_errors(),
 				'berita'=>$this->m_berita->detail($id_berita),
@@ -131,7 +131,7 @@ class Berita extends CI_Controller{
 		}
 		
 		$data = array(
-			'title'=>'SMAN 1 Ungaran',
+			'title'=>'SMA Baskoro Raya',
 			'title2'=>'Tambah Berita',
 			'berita'=>$this->m_berita->detail($id_berita),
 			'isi'=>'admin/berita/v_edit'

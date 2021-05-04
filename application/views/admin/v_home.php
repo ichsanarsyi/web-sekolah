@@ -4,8 +4,8 @@
 			Selamat datang di halaman Admin
         </div>
         <div class="panel-body">
-			<h3>Tugas Pemrograman Basis Data</h5>
-			<h5>Nama / NIM	: Ichsan Arsyi Putra / 21120118120029</h5>	
+			<h4>Jumlah Siswa:</h4>
+			<h4>Jumlah Guru:</h4>	
         </div>
     </div>
 </div> 

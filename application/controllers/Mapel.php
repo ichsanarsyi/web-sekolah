@@ -13,7 +13,7 @@ class Mapel extends CI_Controller{
 	public function index()
 	{
 		$data = array(
-			'title'=>'SMAN 1 Ungaran',
+			'title'=>'SMA Baskoro Raya',
 			'title2'=>'Mata Pelajaran',
 			'mapel'=>$this->m_mapel->lists(),
 			'isi'=>'admin/v_mapel'
