@@ -66,18 +66,22 @@
 				<!-- Features Item -->
 				<div class="col-lg-3 feature_col">
 					<div class="feature text-center trans_400">
+					<a href="<?=base_url('home/guru')?>">
 						<div class="feature_icon"><img src="<?=base_url()?>template/front-end/images/icon_2.png" alt=""></div>
 						<h3 class="feature_title">Daftar Guru</h3>
 						<div class="feature_text"><p>Tenaga pengajar</p></div>
+					</a>	
 					</div>
 				</div>
 
 				<!-- Features Item -->
 				<div class="col-lg-3 feature_col">
 					<div class="feature text-center trans_400">
+					<a href="<?=base_url('home/siswa')?>">
 						<div class="feature_icon"><img src="<?=base_url()?>template/front-end/images/icon_3.png" alt=""></div>
 						<h3 class="feature_title">Daftar Siswa</h3>
 						<div class="feature_text"><p>Peserta didik</p></div>
+					</a>	
 					</div>
 				</div>
 

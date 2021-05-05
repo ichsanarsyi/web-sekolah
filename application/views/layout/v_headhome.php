@@ -11,10 +11,8 @@
 <link rel="stylesheet" type="text/css" href="<?=base_url()?>template/front-end/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
 <link rel="stylesheet" type="text/css" href="<?=base_url()?>template/front-end/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
 <link rel="stylesheet" type="text/css" href="<?=base_url()?>template/front-end/plugins/OwlCarousel2-2.2.1/animate.css">
-<link rel="stylesheet" type="text/css" href="<?=base_url()?>template/front-end/styles/contact.css">
-<link rel="stylesheet" type="text/css" href="<?=base_url()?>template/front-end/styles/contact_responsive.css">
+<link rel="stylesheet" type="text/css" href="<?=base_url()?>template/front-end/styles/main_styles.css">
+<link rel="stylesheet" type="text/css" href="<?=base_url()?>template/front-end/styles/responsive.css">
 <!-- Favicon -->
 <link rel="icon" href="<?=base_url()?>assets/images/favicon32.png" type="image/gif">
-<!-- DataTables -->
-<link rel="stylesheet" type="text/css" href="<?=base_url()?>template/DataTables/datatables.min.css"/>
 </head>

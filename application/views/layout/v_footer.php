@@ -7,22 +7,24 @@
 						<div class="row">			
 
 							<div class="col-lg-2 footer_col">
-								<center>
-								<div class="footer_logo_container">
-									<a href="#">
-										<div class="logo_icon"><img src="<?=base_url()?>assets/images/favicon128.png" alt="<?=base_url()?>assets/images/favicon64.png"></div>						
-									</a>
-								</div>
-								</center>
+								<div class="footer_section footer_about">
+									<center>
+									<div class="footer_logo_container">
+										<a href="<?=base_url('home')?>">
+											<div class="logo_icon"><img src="<?=base_url()?>assets/images/favicon128.png" alt="<?=base_url()?>assets/images/favicon64.png"></div>						
+										</a>
+									</div>
+									</center>
+								</div>								
 							</div>
 
 							<div class="col-lg-6 footer_col">
 					
 								<!-- Footer About -->
-								<center>
-								<div class="footer_section footer_about">									
+								<div class="footer_section footer_about">	
+									<center>								
 									<div class="footer_logo_container">
-										<a href="#">
+										<a href="<?=base_url('home')?>">
 											<div class="footer_logo_text">SMA<span> Baskoro Raya</span></div>
 										</a>
 									</div>
@@ -37,16 +39,16 @@
 											<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
 										</ul>
 									</div>
+									</center>
 								</div>
-								</center>
 								
 							</div>
 
 							<div class="col-lg-4 footer_col">
 					
 								<!-- Footer Contact -->
-								<center>
 								<div class="footer_section footer_contact">
+									<center>
 									<div class="footer_title">Hubungi Kami</div>
 									<div class="footer_contact_info">
 										<ul>
@@ -55,8 +57,8 @@
 											<li>27 Baskoro Raya 44/3 Kota Semarang, Indonesia</li>
 										</ul>
 									</div>
+									</center>
 								</div>
-								</center>
 								
 							</div>
 						</div>
@@ -90,5 +92,17 @@
 <script src="<?=base_url()?>template/front-end/plugins/easing/easing.js"></script>
 <script src="<?=base_url()?>template/front-end/plugins/parallax-js-master/parallax.min.js"></script>
 <script src="<?=base_url()?>template/front-end/js/custom.js"></script>
+<script src="<?=base_url()?>template/front-end/plugins/marker_with_label/marker_with_label.js"></script>
+<script src="<?=base_url()?>template/front-end/js/contact.js"></script>
+<script type="text/javascript" src="<?=base_url()?>template/DataTables/datatables.min.js"></script>
+<script>
+    $('#tabelguru, #tabelsiswa').DataTable();
+	initSample();
+	window.setTimeout(function(){
+		$('.alert').fadeTo(500,0).slideUp(500, function(){
+			$(this).remove();
+		});
+	}, 3000);
+</script>	
 </body>
 </html>

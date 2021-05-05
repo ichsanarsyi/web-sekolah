@@ -21,6 +21,9 @@
 
         <!-- Custom Fonts -->
         <link href="<?=base_url()?>template/back-end/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		
+		<!-- Favicon -->
+		<link rel="icon" href="<?=base_url()?>assets/images/favicon32.png" type="image/gif">
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -82,6 +85,14 @@
 
         <!-- Custom Theme JavaScript -->
         <script src="<?=base_url()?>template/back-end/js/startmin.js"></script>
+
+		<script>
+			window.setTimeout(function(){
+				$('.alert').fadeTo(500,0).slideUp(500, function(){
+					$(this).remove();
+				});
+			}, 3000);
+		</script>	
 
     </body>
 </html>
