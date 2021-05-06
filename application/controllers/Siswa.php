@@ -13,11 +13,11 @@ class Siswa extends CI_Controller{
 	public function index()
 	{
 		$data = array(
-			'title'		=>'SMA Baskoro Raya',
-			'title2'	=>'Data Siswa',
-			'siswa'		=>$this->m_siswa->lists(),
-			'isi'		=>'admin/siswa/v_list'
-		);
+				'title'		=>'SMA Baskoro Raya',
+				'title2'	=>'Data Siswa',
+				'siswa'		=>$this->m_siswa->lists(),
+				'isi'		=>'admin/siswa/v_list'
+				);
 		
 		$this->load->view('admin/layout/v_wrapper',$data,FALSE);
 	}
@@ -38,11 +38,11 @@ class Siswa extends CI_Controller{
 			if (!$this->upload->do_upload('foto_siswa'))
             {                
 				$data = array(
-				'title'=>'SMA Baskoro Raya',
-				'title2'=>'Tambah Data Siswa',
-				'error'=>$this->upload->display_errors(), 
-				'isi'=>'admin/siswa/v_add'
-				);		
+						'title'=>'SMA Baskoro Raya',
+						'title2'=>'Tambah Data Siswa',
+						'error'=>$this->upload->display_errors(), 
+						'isi'=>'admin/siswa/v_add'
+						);		
 				$this->load->view('admin/layout/v_wrapper',$data,FALSE);
             }
             else
@@ -52,16 +52,16 @@ class Siswa extends CI_Controller{
 				$config['source_image'] = './foto_siswa/'.$upload_data['uploads']['file_name'];
 				$this->load->library('image_lib', $config);
 				
-				$data=array(
-							'nis'			=>$this->input->post('nis'),
-							'nama_siswa'	=>$this->input->post('nama_siswa'),
-							'tempat_lahir'	=>$this->input->post('tempat_lahir'),
-							'tgl_lahir'		=>$this->input->post('tgl_lahir'),
-							'kelas'			=>$this->input->post('kelas'),
-							'foto_siswa'	=>$upload_data['uploads']['file_name']
-							);
+				$data = array(
+						'nis'			=>$this->input->post('nis'),
+						'nama_siswa'	=>$this->input->post('nama_siswa'),
+						'tempat_lahir'	=>$this->input->post('tempat_lahir'),
+						'tgl_lahir'		=>$this->input->post('tgl_lahir'),
+						'kelas'			=>$this->input->post('kelas'),
+						'foto_siswa'	=>$upload_data['uploads']['file_name']
+						);
 				$this->m_siswa->add($data);
-				$this->session->set_flashdata('pesan', 'Data Berhasil Ditambahkan');
+				$this->session->set_flashdata('notif', 'Data Berhasil Ditambahkan');
 				redirect('siswa');
             }
 		}
@@ -91,12 +91,12 @@ class Siswa extends CI_Controller{
 			if (!$this->upload->do_upload('foto_siswa'))
             {                
 				$data = array(
-				'title'=>'SMA Baskoro Raya',
-				'title2'=>'Edit Data Siswa',
-				'error'=>$this->upload->display_errors(),
-				'siswa'=>$this->m_siswa->detail($id_siswa),
-				'isi'=>'admin/siswa/v_edit'
-				);		
+						'title'=>'SMA Baskoro Raya',
+						'title2'=>'Edit Data Siswa',
+						'error'=>$this->upload->display_errors(),
+						'siswa'=>$this->m_siswa->detail($id_siswa),
+						'isi'=>'admin/siswa/v_edit'
+						);		
 				$this->load->view('admin/layout/v_wrapper',$data,FALSE);
             }
             else
@@ -111,17 +111,17 @@ class Siswa extends CI_Controller{
 					unlink('./foto_siswa/'.$siswa->foto_siswa);
 				}
 				
-				$data=array(
-							'id_siswa'		=>$id_siswa,
-							'nis'			=>$this->input->post('nis'),
-							'nama_siswa'	=>$this->input->post('nama_siswa'),
-							'tempat_lahir'	=>$this->input->post('tempat_lahir'),
-							'tgl_lahir'		=>$this->input->post('tgl_lahir'),
-							'kelas'			=>$this->input->post('kelas'),
-							'foto_siswa'	=>$upload_data['uploads']['file_name']
-							);
+				$data = array(
+						'id_siswa'		=>$id_siswa,
+						'nis'			=>$this->input->post('nis'),
+						'nama_siswa'	=>$this->input->post('nama_siswa'),
+						'tempat_lahir'	=>$this->input->post('tempat_lahir'),
+						'tgl_lahir'		=>$this->input->post('tgl_lahir'),
+						'kelas'			=>$this->input->post('kelas'),
+						'foto_siswa'	=>$upload_data['uploads']['file_name']
+						);
 				$this->m_siswa->edit($data);
-				$this->session->set_flashdata('pesan', 'Data Berhasil Diedit');
+				$this->session->set_flashdata('notif', 'Data Berhasil Diedit');
 				redirect('siswa');
             }
 			
@@ -130,16 +130,16 @@ class Siswa extends CI_Controller{
 			$config['source_image'] = './foto_siswa'.$upload_data['uploads']['file_name'];
 			$this->load->library('image_lib', $config);
 				
-			$data=array(
-						'id_siswa'=>$id_siswa,
-						'nis'=>$this->input->post('nis'),
-						'nama_siswa'=>$this->input->post('nama_siswa'),
-						'tempat_lahir'=>$this->input->post('tempat_lahir'),
-						'tgl_lahir'=>$this->input->post('tgl_lahir'),
-						'kelas'=>$this->input->post('kelas')
-						);
+			$data = array(
+					'id_siswa'=>$id_siswa,
+					'nis'=>$this->input->post('nis'),
+					'nama_siswa'=>$this->input->post('nama_siswa'),
+					'tempat_lahir'=>$this->input->post('tempat_lahir'),
+					'tgl_lahir'=>$this->input->post('tgl_lahir'),
+					'kelas'=>$this->input->post('kelas')
+					);
 			$this->m_siswa->edit($data);
-			$this->session->set_flashdata('pesan', 'Data Berhasil Diedit');
+			$this->session->set_flashdata('notif', 'Data Berhasil Diedit');
 			redirect('siswa');
 		}
 		
@@ -160,7 +160,7 @@ class Siswa extends CI_Controller{
 		}
 		$data=array('id_siswa'=>$id_siswa);
 		$this->m_siswa->delete($data);
-		$this->session->set_flashdata('pesan', 'Data Berhasil Dihapus');
+		$this->session->set_flashdata('notif', 'Data Berhasil Dihapus');
 		redirect('siswa');
 	}
 

@@ -113,13 +113,13 @@
 							
 							<!-- Milestone -->
 							<div class="milestone">
-								<div class="milestone_counter" data-end-value="50">0</div>
+								<div class="milestone_counter" data-end-value="<?= $this->db->from("tbl_guru")->count_all_results(); ?>">0</div>
 								<div class="milestone_text">Guru</div>
 							</div>
 
 							<!-- Milestone -->
 							<div class="milestone">
-								<div class="milestone_counter" data-end-value="5" data-sign-after="">0</div>
+								<div class="milestone_counter" data-end-value="<?= $this->db->from("tbl_siswa")->count_all_results(); ?>">0</div>
 								<div class="milestone_text">Siswa</div>
 							</div>
 

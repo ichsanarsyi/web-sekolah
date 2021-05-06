@@ -5,20 +5,35 @@
 					<div class="col">
 						<div class="header_content d-flex flex-row align-items-center justify-content-start">
 							<div class="logo_container">
-							<a href="<?=base_url('home')?>">
+							<a href="<?=base_url()?>">
 								<div class="logo_icon"><img src="<?=base_url()?>assets/images/favicon64.png" alt="<?=base_url()?>assets/images/favicon32.png"></div>						
 							</a>
 							</div>
 							<div class="logo_container">
-								<a href="<?=base_url('home')?>">									
+								<a href="<?=base_url()?>">									
 									<div class="logo_text">SMA<span> Baskoro Raya</span></div>
 								</a>
 							</div>
 							<nav class="main_nav_contaner ml-auto">
-								<ul class="main_nav">
-									<li class="active"><a href="<?=base_url('home')?>">Beranda</a></li>									
-									<li><a href="<?=base_url('home/guru')?>">Guru</a></li>
-									<li><a href="<?=base_url('home/siswa')?>">Siswa</a></li>
+								<ul class="main_nav nav">
+									<li
+									<?php if ((current_url()) == (base_url())) { ?>
+										class ="active"
+									<?php } ?>
+									>
+									<a href="<?=base_url()?>">Beranda</a></li>								
+									<li
+									<?php if ((current_url()) == (base_url('home/guru'))) { ?>
+										class ="active"
+									<?php } ?>
+									>
+									<a href="<?=base_url('home/guru')?>">Guru</a></li>
+									<li
+									<?php if ((current_url()) == (base_url('home/siswa'))) { ?>
+										class ="active"
+									<?php } ?>
+									>
+									<a href="<?=base_url('home/siswa')?>">Siswa</a></li>
 								</ul>	
 
 								<!-- Hamburger -->

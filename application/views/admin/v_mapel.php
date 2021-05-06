@@ -5,10 +5,10 @@
         </div>
 		<div class="panel-body">
 			<?php
-				if ($this->session->flashdata('pesan')) {
+				if ($this->session->flashdata('notif')) {
 					echo '<div class="alert alert-success alert-dismissible">
                          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>';
-					echo $this->session->flashdata('pesan');
+					echo $this->session->flashdata('notif');
 					echo '</div>';	
 					}
 			?>

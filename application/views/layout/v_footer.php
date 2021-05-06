@@ -10,7 +10,7 @@
 								<div class="footer_section footer_about">
 									<center>
 									<div class="footer_logo_container">
-										<a href="<?=base_url('home')?>">
+										<a href="<?=base_url()?>">
 											<div class="logo_icon"><img src="<?=base_url()?>assets/images/favicon128.png" alt="<?=base_url()?>assets/images/favicon64.png"></div>						
 										</a>
 									</div>
@@ -24,7 +24,7 @@
 								<div class="footer_section footer_about">	
 									<center>								
 									<div class="footer_logo_container">
-										<a href="<?=base_url('home')?>">
+										<a href="<?=base_url()?>">
 											<div class="footer_logo_text">SMA<span> Baskoro Raya</span></div>
 										</a>
 									</div>
@@ -103,6 +103,11 @@
 			$(this).remove();
 		});
 	}, 3000);
+	$(document).ready(function() {
+	// get current URL path and assign 'active' class
+	var pathname = window.location.pathname;
+	$('.nav > li > a[href="'+pathname+'"]').parent().addClass('active');
+	});
 </script>	
 </body>
 </html>

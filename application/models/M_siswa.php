@@ -36,6 +36,13 @@ class M_siswa extends CI_Model
 		$this->db->where('id_siswa', $data['id_siswa']);
 		$this->db->delete('tbl_siswa', $data);
 	}
+
+	public function hitung()
+	{
+		$this->db->select('*');
+		$this->db->from('tbl_siswa');
+		return $this->db->num_rows();
+	}
 	
 }
 

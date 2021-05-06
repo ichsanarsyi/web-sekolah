@@ -4,8 +4,8 @@
 			Selamat datang di halaman Admin
         </div>
         <div class="panel-body">
-			<h4>Jumlah Siswa:</h4>
-			<h4>Jumlah Guru:</h4>	
+			<h4>Jumlah Guru: <?= $this->db->from("tbl_guru")->count_all_results(); ?></h4>	
+			<h4>Jumlah Siswa: <?= $this->db->from("tbl_siswa")->count_all_results(); ?></h4>
         </div>
     </div>
 </div> 

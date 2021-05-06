@@ -14,11 +14,11 @@ class Guru extends CI_Controller{
 	public function index()
 	{
 		$data = array(
-			'title'=>'SMA Baskoro Raya',
-			'title2'=>'Data Guru',
-			'guru'=>$this->m_guru->lists(),
-			'isi'=>'admin/guru/v_list'
-		);
+				'title'=>'SMA Baskoro Raya',
+				'title2'=>'Data Guru',
+				'guru'=>$this->m_guru->lists(),
+				'isi'=>'admin/guru/v_list'
+				);
 		
 		$this->load->view('admin/layout/v_wrapper',$data,FALSE);
 	}
@@ -40,12 +40,12 @@ class Guru extends CI_Controller{
 			if (!$this->upload->do_upload('foto_guru'))
             {                
 				$data = array(
-				'title'=>'SMAN 1 Ungaran',
-				'title2'=>'Tambah Data Guru',
-				'error'=>$this->upload->display_errors(),
-				'mapel'=>$this->m_mapel->lists(), 
-				'isi'=>'admin/guru/v_add'
-				);		
+						'title'=>'SMAN 1 Ungaran',
+						'title2'=>'Tambah Data Guru',
+						'error'=>$this->upload->display_errors(),
+						'mapel'=>$this->m_mapel->lists(), 
+						'isi'=>'admin/guru/v_add'
+						);		
 				$this->load->view('admin/layout/v_wrapper',$data,FALSE);
             }
             else
@@ -55,17 +55,17 @@ class Guru extends CI_Controller{
 				$config['source_image'] = './foto_guru/'.$upload_data['uploads']['file_name'];
 				$this->load->library('image_lib', $config);
 				
-				$data=array(
-							'nip'			=>$this->input->post('nip'),
-							'nama_guru'		=>$this->input->post('nama_guru'),
-							'tempat_lahir'	=>$this->input->post('tempat_lahir'),
-							'tgl_lahir'		=>$this->input->post('tgl_lahir'),
-							'id_mapel'		=>$this->input->post('id_mapel'),
-							'pendidikan'	=>$this->input->post('pendidikan'),
-							'foto_guru'		=>$upload_data['uploads']['file_name']
-							);
+				$data = array(
+						'nip'			=>$this->input->post('nip'),
+						'nama_guru'		=>$this->input->post('nama_guru'),
+						'tempat_lahir'	=>$this->input->post('tempat_lahir'),
+						'tgl_lahir'		=>$this->input->post('tgl_lahir'),
+						'id_mapel'		=>$this->input->post('id_mapel'),
+						'pendidikan'	=>$this->input->post('pendidikan'),
+						'foto_guru'		=>$upload_data['uploads']['file_name']
+						);
 				$this->m_guru->add($data);
-				$this->session->set_flashdata('pesan', 'Data Berhasil Ditambahkan');
+				$this->session->set_flashdata('notif', 'Data Berhasil Ditambahkan');
 				redirect('guru');
             }
 		}
@@ -98,13 +98,13 @@ class Guru extends CI_Controller{
 			if (!$this->upload->do_upload('foto_guru'))
             {                
 				$data = array(
-				'title'=>'SMA Baskoro Raya',
-				'title2'=>'Edit Data Guru',
-				'error'=>$this->upload->display_errors(),
-				'guru'=>$this->m_guru->detail($id_guru),
-				'mapel'=>$this->m_mapel->lists(), 
-				'isi'=>'admin/guru/v_edit'
-				);		
+						'title'=>'SMA Baskoro Raya',
+						'title2'=>'Edit Data Guru',
+						'error'=>$this->upload->display_errors(),
+						'guru'=>$this->m_guru->detail($id_guru),
+						'mapel'=>$this->m_mapel->lists(), 
+						'isi'=>'admin/guru/v_edit'
+						);		
 				$this->load->view('admin/layout/v_wrapper',$data,FALSE);
             }
             else
@@ -119,18 +119,18 @@ class Guru extends CI_Controller{
 					unlink('./foto_guru/'.$guru->foto_guru);
 				}
 				
-				$data=array(
-							'id_guru'		=>$id_guru,
-							'nip'			=>$this->input->post('nip'),
-							'nama_guru'		=>$this->input->post('nama_guru'),
-							'tempat_lahir'	=>$this->input->post('tempat_lahir'),
-							'tgl_lahir'		=>$this->input->post('tgl_lahir'),
-							'id_mapel'		=>$this->input->post('id_mapel'),
-							'pendidikan'	=>$this->input->post('pendidikan'),
-							'foto_guru'		=>$upload_data['uploads']['file_name']
-							);
+				$data = array(
+						'id_guru'		=>$id_guru,
+						'nip'			=>$this->input->post('nip'),
+						'nama_guru'		=>$this->input->post('nama_guru'),
+						'tempat_lahir'	=>$this->input->post('tempat_lahir'),
+						'tgl_lahir'		=>$this->input->post('tgl_lahir'),
+						'id_mapel'		=>$this->input->post('id_mapel'),
+						'pendidikan'	=>$this->input->post('pendidikan'),
+						'foto_guru'		=>$upload_data['uploads']['file_name']
+						);
 				$this->m_guru->edit($data);
-				$this->session->set_flashdata('pesan', 'Data Berhasil Diedit');
+				$this->session->set_flashdata('notif', 'Data Berhasil Diedit');
 				redirect('guru');
             }
 			
@@ -139,17 +139,17 @@ class Guru extends CI_Controller{
 			$config['source_image'] = './foto_guru'.$upload_data['uploads']['file_name'];
 			$this->load->library('image_lib', $config);
 				
-			$data=array(
-						'id_guru'=>$id_guru,
-						'nip'=>$this->input->post('nip'),
-						'nama_guru'=>$this->input->post('nama_guru'),
-						'tempat_lahir'=>$this->input->post('tempat_lahir'),
-						'tgl_lahir'=>$this->input->post('tgl_lahir'),
-						'id_mapel'=>$this->input->post('id_mapel'),
-						'pendidikan'=>$this->input->post('pendidikan')
-						);
+			$data = array(
+					'id_guru'=>$id_guru,
+					'nip'=>$this->input->post('nip'),
+					'nama_guru'=>$this->input->post('nama_guru'),
+					'tempat_lahir'=>$this->input->post('tempat_lahir'),
+					'tgl_lahir'=>$this->input->post('tgl_lahir'),
+					'id_mapel'=>$this->input->post('id_mapel'),
+					'pendidikan'=>$this->input->post('pendidikan')
+					);
 			$this->m_guru->edit($data);
-			$this->session->set_flashdata('pesan', 'Data Berhasil Diedit');
+			$this->session->set_flashdata('notif', 'Data Berhasil Diedit');
 			redirect('guru');
 		}
 		
@@ -172,7 +172,7 @@ class Guru extends CI_Controller{
 		}
 		$data=array('id_guru'=>$id_guru);
 		$this->m_guru->delete($data);
-		$this->session->set_flashdata('pesan', 'Data Berhasil Dihapus');
+		$this->session->set_flashdata('notif', 'Data Berhasil Dihapus');
 		redirect('guru');
 	}
 }
