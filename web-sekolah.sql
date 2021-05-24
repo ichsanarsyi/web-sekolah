@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 06, 2021 at 09:57 AM
+-- Generation Time: May 24, 2021 at 07:37 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -43,11 +43,12 @@ CREATE TABLE `tbl_guru` (
 --
 
 INSERT INTO `tbl_guru` (`id_guru`, `no_id`, `nama_guru`, `tempat_lahir`, `tgl_lahir`, `id_mapel`, `pendidikan`, `foto_guru`) VALUES
-(3, '10001', 'Putra', 'Semarang', '2021-02-21', 2, 'S2', 'gmb_kompas.gif'),
+(3, '10001', 'Putra Putra', 'Kudus', '1984-06-06', 8, 'D3', 'acc.jpg'),
 (4, '10002', 'Sassan', 'Semarang', '2021-02-21', 3, 'S1', 'Quote.png'),
-(5, '10003', 'Sirajuddin', 'Bekasi', '1990-01-12', 1, 'S2', 'yosi_merah_4x6.jpg'),
-(6, '10004', 'Kirishima Touka', 'Tokyo', '2021-02-06', 5, 'S1', 'Pamflet_AMDIC.png'),
-(7, '10005', 'Unyil', 'Bekasi', '2021-02-02', 3, 'S2', 'Fantasia_Painting(2).jpg');
+(5, '10003', 'Sirajuddin', 'Bekasi', '1990-01-12', 3, 'S2', 'yosi_merah_4x6.jpg'),
+(6, '10004', 'Kirishima Touka', 'Tokyo', '2021-02-06', 10, 'S1', 'Pamflet_AMDIC.png'),
+(7, '10005', 'Unyil Usrok', 'Bekasi', '2021-02-02', 3, 'S2', 'Fantasia_Painting(2).jpg'),
+(9, '10006', 'Kazakiri Hyouka', 'Situbondo', '2020-05-06', 8, 'S1', 'Hyouka.jpg');
 
 -- --------------------------------------------------------
 
@@ -72,7 +73,10 @@ INSERT INTO `tbl_mapel` (`id_mapel`, `nama_mapel`) VALUES
 (6, 'Fisika Dasar'),
 (7, 'Geografi'),
 (8, 'Geologi'),
-(10, 'Penjaskes');
+(10, 'Penjaskes'),
+(14, 'IPA'),
+(15, 'IPS'),
+(16, 'Kewirausahaan');
 
 -- --------------------------------------------------------
 
@@ -96,9 +100,10 @@ CREATE TABLE `tbl_siswa` (
 
 INSERT INTO `tbl_siswa` (`id_siswa`, `no_id`, `nama_siswa`, `tempat_lahir`, `tgl_lahir`, `kelas`, `foto_siswa`) VALUES
 (2, '90001', 'Exaan', 'Semarang', '2021-02-02', 'X', 'peta-banten.jpg'),
-(3, '90002', 'San', 'Bogor', '2021-02-10', 'XII', 'Firefox-logo_svg.png'),
+(3, '90002', 'San San', 'Bogor', '2021-02-10', 'XII', 'Firefox-logo_svg.png'),
 (4, '90003', 'Gru', 'Ciamis', '2021-02-07', 'XII', 'FA-chowking-counter-standee-30-x-45-cm-SP-just-1.jpg'),
-(5, '90004', 'Udin Penyok', 'NTT', '2000-06-15', 'XI', 'mmexport1385272967723.jpg');
+(5, '90004', 'Udin Penyok', 'NTT', '2000-06-15', 'X', 'mmexport1385272967723.jpg'),
+(6, '90005', 'Kamijou Touma', 'Grobogan', '2000-09-21', 'X', 'Kamijou_Touma_Manga_Index1.png');
 
 -- --------------------------------------------------------
 
@@ -121,15 +126,17 @@ CREATE TABLE `tbl_user` (
 
 INSERT INTO `tbl_user` (`id_user`, `no_id`, `nama_user`, `username`, `password`, `level`) VALUES
 (1, '00000', 'Admin', 'admin', 'admin', 1),
-(2, '10001', 'Putra', 'putra', 'putra', 2),
+(2, '10001', 'Putra Putra', 'putra', 'putra', 2),
 (3, '10002', 'Sassan', 'sassan', 'sassan', 2),
 (4, '10003', 'Sirajuddin', 'sirajuddin', 'sirajuddin', 2),
 (5, '10004', 'Kirishima Touka', 'kirishima', 'kirishima', 2),
-(6, '10005', 'Unyil', 'unyil', 'unyil', 2),
-(7, '90001', 'Exaan', 'exaan', 'exaan', 2),
-(8, '90002', 'San', 'san', 'san', 2),
-(9, '90003', 'Gru', 'gru', 'gru', 2),
-(10, '90004', 'Udin Penyok', 'udin', 'udin', 2);
+(6, '10005', 'Unyil', 'unyilusrok', 'unyilusrok', 2),
+(7, '90001', 'Exaan', 'exaan', 'exaan', 3),
+(8, '90002', 'San San', 'san', 'san', 3),
+(9, '90003', 'Gru', 'gru', 'gru', 3),
+(10, '90004', 'Udin Penyok', 'udinpenyok', 'udinpenyok', 3),
+(11, '10006', 'Kazakiri Hyouka', 'kazakiri', 'kazakiri', 2),
+(14, '90005', 'Kamijou Touma', 'kamijout', 'kamijout', 3);
 
 --
 -- Indexes for dumped tables
@@ -167,25 +174,25 @@ ALTER TABLE `tbl_user`
 -- AUTO_INCREMENT for table `tbl_guru`
 --
 ALTER TABLE `tbl_guru`
-  MODIFY `id_guru` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_guru` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `tbl_mapel`
 --
 ALTER TABLE `tbl_mapel`
-  MODIFY `id_mapel` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_mapel` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `tbl_siswa`
 --
 ALTER TABLE `tbl_siswa`
-  MODIFY `id_siswa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_siswa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `id_user` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_user` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

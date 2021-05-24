@@ -93,7 +93,6 @@
 			
 			<div class="form-group">
 				<button type="submit" class="btn btn-success">Simpan</button>
-				<button type="reset" class="btn btn-info">Reset</button>
 			</div>
 						
 			<?php echo form_close(); ?>
