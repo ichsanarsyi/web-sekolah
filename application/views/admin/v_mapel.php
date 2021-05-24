@@ -5,10 +5,10 @@
         </div>
 		<div class="panel-body">
 			<?php
-				if ($this->session->flashdata('notif')) {
+				if ($this->session->flashdata('notifmapel')) {
 					echo '<div class="alert alert-success alert-dismissible">
                          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>';
-					echo $this->session->flashdata('notif');
+					echo $this->session->flashdata('notifmapel');
 					echo '</div>';	
 					}
 			?>
@@ -47,10 +47,10 @@
                 <h4 class="modal-title" id="myModalLabel">Tambah Mata Pelajaran</h4>
             </div>
             <div class="modal-body">
-			<?php echo form_open('mapel/add'); ?>
+			<?php echo form_open_multipart('mapel/add'); ?>
 			<div class="form-group">
                 <label>Mata Pelajaran</label>
-                <input class="form-control" type="text" name="nama_mapel" placeholder="Mata Pelajaran">
+                <input class="form-control" type="text" name="nama_mapel" placeholder="Mata Pelajaran" required>
             </div>
             </div>
             <div class="modal-footer">
@@ -71,10 +71,10 @@
                 <h4 class="modal-title" id="myModalLabel">Edit Mata Pelajaran</h4>
             </div>
             <div class="modal-body">
-			<?php echo form_open('mapel/edit/'.$value->id_mapel); ?>
+			<?php echo form_open_multipart('mapel/edit/'.$value->id_mapel); ?>
 			<div class="form-group">
                 <label>Mata Pelajaran</label>
-                <input class="form-control" type="text" name="nama_mapel" value="<?=$value->nama_mapel?>">
+                <input class="form-control" type="text" name="nama_mapel" value="<?=$value->nama_mapel?>" required>
             </div>
             </div>
             <div class="modal-footer">

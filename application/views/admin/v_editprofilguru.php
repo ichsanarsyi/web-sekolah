@@ -14,32 +14,8 @@
                           <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'.$error_upload.'</div>';
 				}
 			
-			echo form_open_multipart('guru/edit/'.$guru->id_guru);
+				echo form_open_multipart('profil/editguru/'.$guru->id_guru);
 			?>
-
-			<div class="row">
-				<div class="col-md-6">
-					<div class="form-group">
-						<label>Username</label>
-						<input class="form-control" value="<?=$user->username?>" type="text" name="username" placeholder="Username" required>
-					</div>	
-					<div class="form-group">
-						<label>Password</label>
-						<input class="form-control" value="<?=$user->password?>" type="password" name="password" placeholder="Password" required>
-					</div>	
-				</div>
-
-				<div class="col-md-6">
-					<fieldset disabled>
-						<div class="form-group" disabled>
-							<label>Level</label>
-							<select name="level" class="form-control">
-								<option value="<?=$user->level?>"><?=$user->level?></option>
-							</select>
-						</div>
-					<fieldset>
-				</div>
-			</div>
 			
 			<div class="form-group">
 				<label>NIP</label>

@@ -14,12 +14,36 @@
                           <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'.$error_upload.'</div>';
 				}
 			
-				echo form_open_multipart('siswa/edit/'.$siswa->id_siswa);
+			echo form_open_multipart('siswa/edit/'.$siswa->id_siswa);
 			?>
 			
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label>Username</label>
+						<input class="form-control" value="<?=$user->username?>" type="text" name="username" placeholder="Username" required>
+					</div>	
+					<div class="form-group">
+						<label>Password</label>
+						<input class="form-control" value="<?=$user->password?>" type="password" name="password" placeholder="Password" required>
+					</div>	
+				</div>
+
+				<div class="col-md-6">
+				<fieldset disabled>
+					<div class="form-group" disabled>
+						<label>Level</label>
+						<select name="level" class="form-control">
+							<option value="<?=$user->level?>"><?=$user->level?></option>
+						</select>
+					</div>
+				<fieldset>
+				</div>
+			</div>
+
 			<div class="form-group">
 				<label>NIS</label>
-				<input class="form-control" value="<?=$siswa->nis?>" type="text" name="nis" placeholder="NIS" required>
+				<input class="form-control" value="<?=$siswa->no_id?>" type="text" name="no_id" placeholder="NIS" required readonly>
 			</div>
 			
 			<div class="form-group">
@@ -46,15 +70,6 @@
 					<label>Kelas</label>
 					<select name="kelas" class="form-control">
 						<option value="<?=$siswa->kelas?>"><?=$siswa->kelas?></option>
-						<option value="I">I</option>
-						<option value="II">II</option>
-						<option value="III">III</option>
-						<option value="IV">IV</option>
-						<option value="V">V</option>
-						<option value="VI">VI</option>
-						<option value="VII">VII</option>
-						<option value="VIII">VIII</option>
-						<option value="XI">IX</option>
 						<option value="X">X</option>
 						<option value="XI">XI</option>
 						<option value="XII">XII</option>

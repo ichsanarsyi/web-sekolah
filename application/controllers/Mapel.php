@@ -26,28 +26,28 @@ class Mapel extends CI_Controller{
 	{
 		$data = array('nama_mapel'=>$this->input->post('nama_mapel'));
 		$this->m_mapel->add($data);
-		$this->session->set_flashdata('notif','Data Berhasil Ditambahkan');
+		$this->session->set_flashdata('notifmapel','Data Berhasil Ditambahkan');
 		redirect('mapel'); 
 	}
 	
 	public function edit($id_mapel)
 	{
 		$data = array(
-						'id_mapel'=>$id_mapel,
-						'nama_mapel'=>$this->input->post('nama_mapel')
-					);
+				'id_mapel'=>$id_mapel,
+				'nama_mapel'=>$this->input->post('nama_mapel')
+				);
 		$this->m_mapel->edit($data);
-		$this->session->set_flashdata('notif','Data Berhasil Diedit');
+		$this->session->set_flashdata('notifmapel','Data Berhasil Diedit');
 		redirect('mapel'); 
 	}
 	
 	public function delete($id_mapel)
 	{
 		$data = array(
-						'id_mapel'=>$id_mapel
-					);
+				'id_mapel'=>$id_mapel
+				);
 		$this->m_mapel->delete($data);
-		$this->session->set_flashdata('notif','Data Berhasil Dihapus');
+		$this->session->set_flashdata('notifmapel','Data Berhasil Dihapus');
 		redirect('mapel'); 
 	}
 } 

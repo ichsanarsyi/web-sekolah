@@ -5,6 +5,8 @@
         </div>
         <div class="panel-body">
 			<?php
+			echo validation_errors('<div class="alert alert-danger alert-dismissible">
+			<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>','</div>');
 
 				if (isset($error_upload)){
 					echo '<div class="alert alert-danger alert-dismissible">
@@ -14,9 +16,29 @@
 				echo form_open_multipart('guru/add');
 			?>
 			
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label>Username</label>
+						<input class="form-control" type="text" name="username" placeholder="Username" required>
+					</div>	
+					<div class="form-group">
+						<label>Password</label>
+						<input class="form-control" type="password" name="password" placeholder="Password" required>
+					</div>	
+				</div>
+
+				<div class="col-md-6">
+						<div class="form-group">
+							<label>Level</label>
+							<input class="form-control" value="2" type="text" name="level" placeholder="Level" readonly required>
+						</div>
+				</div>
+			</div>
+
 			<div class="form-group">
 				<label>NIP</label>
-				<input class="form-control" type="text" name="nip" placeholder="NIP" required>
+				<input class="form-control" type="text" name="no_id" placeholder="NIP" required>
 			</div>
 			
 			<div class="form-group">

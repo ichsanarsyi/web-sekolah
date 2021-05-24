@@ -25,7 +25,11 @@
 									</li>
 								</ul>
 								<div class="top_bar_login ml-auto">
-									<div class="login_button"><a href="<?=base_url('login')?>">Login</a></div>
+									<?php if ($this->session->userdata('nama_user')) { ?>
+										<div class="login_button"><a href="<?=base_url('login')?>">Halo, <?= $this->session->userdata('nama_user') ?></a></div>
+									<?php } else { ?>
+										<div class="login_button"><a href="<?=base_url('login')?>">Login</a></div>
+									<?php } ?>
 								</div>
 							</div>
 						</div>

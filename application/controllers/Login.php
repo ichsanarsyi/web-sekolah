@@ -5,6 +5,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Login extends CI_Controller{
 	public function index()
 	{
+		if (($this->session->userdata('level'))=="1") {
+			redirect('admin');
+		}
+		else if ((($this->session->userdata('level'))=="2")||(($this->session->userdata('level'))=="3")){
+			redirect('profil');
+		}
+
 		$this->form_validation->set_rules('username', 'Username', 'required');
 		$this->form_validation->set_rules('password', 'Password', 'required');
 				

@@ -5,10 +5,10 @@
         </div>
         <div class="panel-body">
 			<?php
-				if ($this->session->flashdata('notif')) {
+				if ($this->session->flashdata('notifguru')) {
 					echo '<div class="alert alert-success alert-dismissible">
                           <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>';
-					echo $this->session->flashdata('notif');
+					echo $this->session->flashdata('notifguru');
 					echo '</div>';	
 				}
 			?>			
@@ -41,7 +41,7 @@
 						<td><img src="<?=base_url('foto_guru/'.$value->foto_guru)?>" width="50px"></td>
 						<td>
 							<a href="<?= base_url('guru/edit/'.$value->id_guru)?>" class="btn btn-xs btn-primary"><i class="fa fa-pencil"></i></a>
-							<a href="<?= base_url('guru/delete/'.$value->id_guru)?>" onclick="return confirm('Apakah Data Ini akan Dihapus?')" class="btn btn-xs btn-danger"><i class="fa fa-trash"></i></a>
+							<a href="<?= base_url('guru/delete/'.$value->no_id)?>" onclick="return confirm('Apakah Data Ini akan Dihapus?')" class="btn btn-xs btn-danger"><i class="fa fa-trash"></i></a>
 						</td>
 					</tr>
 				<?php } ?> 

@@ -59,9 +59,9 @@
                                     <div class="form-group">
                                         <input class="form-control" placeholder="password" name="password" type="password" value="" required>
                                     </div>
-                                    <div class="col-sm-12 text-center">
-										<button type="submit" class="btn btn-success">Login</button>
-										<a href="<?=base_url()?>" class="btn btn-primary">Web Sekolah</a>
+                                    <div class="col">
+										<a href="<?=base_url()?>" class="btn btn-default pull-left"><i class="fa fa-arrow-circle-left fa-fw"></i> Web Sekolah</a>
+										<button type="submit" class="btn btn-success pull-right">Login</button>
 									</div>
                                     
                                 </fieldset>
